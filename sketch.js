@@ -1,5 +1,5 @@
 var monkey , monkey_running, banana ,bananaImage, obstacle, obstacleImage
-var foodGroup, obstacleGroup
+var foodGroup, obstaclesGroup
 var score
 
 function preload(){
