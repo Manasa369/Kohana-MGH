@@ -1,11 +1,11 @@
 var monkey , monkey_running, banana ,bananaImage, obstacle, obstacleImage
-var FoodGroup, obstacleGroup
+var foodGroup, obstacleGroup
 var score
 
 function preload(){
   
   
-monkey_running =           loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
+monkey_running =loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
   
 bananaImage = loadImage("banana.png");
 obstaceImage = loadImage("obstacle.png");
@@ -28,7 +28,7 @@ function setup() {
   ground.x=ground.width/2;
   console.log(ground.x)
 
-  FoodGroup = new Group();
+  foodGroup = new Group();
   obstaclesGroup = new Group();
 
   score = 0;
@@ -69,10 +69,10 @@ function setup() {
   monkey.velocityY = 0;
       
   obstaclesGroup.setVelocityXEach(0);
-  FoodGroup.setVelocityXEach(0);
+  foodGroup.setVelocityXEach(0);
       
   obstaclesGroup.setLifetimeEach(-1);
-  FoodGroup.setLifetimeEach(-1);
+  foodGroup.setLifetimeEach(-1);
   }
     
   
@@ -93,7 +93,7 @@ function spawnFood() {
     banana.addImage(bananaImage);
     banana.scale=0.05;
     
-    FoodGroup.add(banana);
+    foodGroup.add(banana);
   }
 }
 
